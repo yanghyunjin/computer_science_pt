@@ -1,195 +1,185 @@
-# Day 1 — 파이썬 첫걸음 (Google Colab)
+# Day 1 — First Steps in Python (Google Colab)
 
-> 설치 없이 **바로 만들어 보는 코딩 체험**.  
-> 오늘은 출력/입력 → 간단 계산 → **단일 if 조건문** → if/else 순서로 진행합니다.
-
----
-
-## 오늘의 목표
-
-- `print()`로 컴퓨터에 **말 걸기**
-- `input()`과 **변수**로 값 받아 저장하기
-- 숫자 계산을 위해 **형 변환**(`int`) 이해하기
-- **단일 if문**과 **if/else** 익히기
-- 나만의 **3문항 퀴즈** 만들기(점수 집계)
+> **Coding experience without installation.**  
+> Today we’ll go step by step: Output/Input → Simple calculation → **Single if statement** → if/else.
 
 ---
 
-## 준비물 & 시작하기
+## Today’s Goals
 
-- Google 계정, Chrome 브라우저
-- 접속: <https://colab.research.google.com> → **새 노트** 클릭
-- 노트 이름: `day01_first_code.ipynb`
-- 실행: 셀에 커서 두고 **Shift+Enter**
-
-> 팁: Colab은 자동 저장됩니다. 코드 셀은 **+ 코드** 버튼으로 추가합니다.
+- Talk to the computer with `print()`
+- Receive and store values with `input()` and **variables**
+- Understand **type conversion** (`int`) for numeric calculations
+- Learn **single if** and **if/else**
+- Create your own **3-question quiz** (with score count)
 
 ---
 
-## 1. Hello, World! — 출력과 입력
+## Preparation & Getting Started
 
-### 1-1. 출력
+- Google account, Chrome browser
+- Go to <https://colab.research.google.com> → click **New Notebook**
+- Notebook name: `day01_first_code.ipynb`
+- Run: Place cursor in a cell and press **Shift+Enter**
+
+> Tip: Colab saves automatically. Add new code cells with **+ Code**.
+
+---
+
+## 1. Hello, World! — Output and Input
+
+### 1-1. Output
 
 ```python
 print("Hello, World!")
 ```
 
-### 1-2. 입력 + 변수
+### 1-2. Input + Variable
 
 ```python
-name = input("당신의 이름은 무엇인가요? ")
-print("반가워요,", name, "님! 오늘은 코딩의 첫날이에요 🎉")
+name = input("What is your name? ")
+print("Nice to meet you,", name, "! Today is your first day of coding 🎉")
 ```
 
-**개념 체크**
+**Concept Check**
 
-- `print( )`는 컴퓨터가 **말하는 함수**
-- `input( )`은 **질문하고 응답을 문자열로 받음**
-- **변수**는 데이터를 담는 **상자** 역할
+- `print()` = computer **speaks**
+- `input()` = computer **asks and receives a string**
+- **Variable** = a **box** to store data
 
-**자주 나는 실수**
+**Common Mistakes**
 
-- 따옴표 짝이 안 맞으면 `SyntaxError` → `" "` 짝 확인
-- 실행은 **Shift+Enter**
+- Mismatched quotes → `SyntaxError`
+- Always run with **Shift+Enter**
 
 ---
 
-## 2. 계산기 — 숫자 입력과 형 변환
+## 2. Calculator — Number Input and Type Conversion
 
-### 2-1. 덧셈 계산기
+### 2-1. Addition Calculator
 
 ```python
-print("간단 계산기 🧮")
-a = int(input("첫 번째 숫자를 입력하세요: "))
-b = int(input("두 번째 숫자를 입력하세요: "))
-print("두 수의 합은", a + b, "입니다!")
+print("Simple Calculator 🧮")
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+print("The sum is", a + b, "!")
 ```
 
-**개념 체크**
+**Concept Check**
 
-- `input()`은 **문자열(str)** 을 돌려줌 → 숫자 계산을 하려면 **`int()`** 로 변환
-- `a + b` 는 **숫자** 덧셈 (문자열 덧셈과 다름)
+- `input()` returns a **string** → convert to number with **`int()`**
+- `a + b` = numeric addition (different from string concatenation)
 
-**확장 미션(선택)**
+**Extension Mission (optional)**
 
-- 평균 구하기: `(a + b) / 2`
-- 세 번째 숫자 `c`를 받아 합/평균 출력
+- Average: `(a + b) / 2`
+- Add a third number `c` and print sum/average
 
-**안전장치 맛보기(선택)**
+**Error Handling Preview (optional)**
 
 ```python
 try:
-    x = int(input("숫자를 입력하세요: "))
-    y = int(input("또 다른 숫자: "))
-    print("합:", x + y)
+    x = int(input("Enter a number: "))
+    y = int(input("Another number: "))
+    print("Sum:", x + y)
 except ValueError:
-    print("숫자만 입력해주세요 🙂")
+    print("Numbers only, please 🙂")
 ```
 
 ---
 
-## 3. 조건문 기초 — **단일 if문 → if/else**
+## 3. Conditionals — **Single if → if/else**
 
-> 오늘은 **한 개 조건부터** 시작합니다. (여러 정답 허용, `elif`는 Day 2에서)
+> Today we start with **one condition only**. (Multiple answers with `elif` come tomorrow.)
 
-### 3-1. 단일 if문
+### 3-1. Single if
 
 ```python
 score = 95
 if score >= 90:
-    print("우와! A 학점이에요!")
+    print("Wow! That’s an A!")
 ```
 
-- 조건이 참일 때만 실행, 아니면 **아무 일도 일어나지 않음**
-- `score = 80`으로 바꾸고 실행해 보세요.
+- Runs only if the condition is true, otherwise nothing happens
+- Try changing `score = 80`
 
 ### 3-2. if + else
 
 ```python
-answer = input("세종대왕이 한글을 창제한 연도는? ")
+answer = input("In what year did King Sejong create Hangul? ")
 if answer == "1443":
-    print("정답! 👑")
+    print("Correct! 👑")
 else:
-    print("틀렸습니다. 정답은 1443년이에요.")
+    print("Incorrect. The answer is 1443.")
 ```
 
-- 조건이 거짓일 때도 컴퓨터가 **대답**을 줌
-- 오늘은 **정답 1개만** 허용 (여러 정답 허용은 내일 `elif`로!)
+- With else, the computer always gives a reply
+- For today: **only one correct answer** (multiple → `elif` on Day 2)
 
 ---
 
-## 4. 미니 프로젝트 — 나만의 3문항 퀴즈 (점수 집계)
+## 4. Mini Project — My Own 3-Question Quiz (with Score)
 
-아래 템플릿에서 **문항/정답을 직접 바꿔** 보세요.  
-(정답은 1개만 인정, 소문자 비교 권장)
+Change the questions/answers in the template.  
+(Only 1 correct answer per question, lowercase recommended)
 
 ```python
-print("나만의 취향 퀴즈 🎯")
+print("My Personal Quiz 🎯")
 score = 0
 
 # Q1
-a1 = input("1) 내가 가장 좋아하는 작가는? ").strip().lower()
-if a1 == "셰익스피어":
+a1 = input("1) Who is my favorite author? ").strip().lower()
+if a1 == "shakespeare":
     score += 1
 
 # Q2
-a2 = input("2) 내가 제일 좋아하는 장르는? ").strip().lower()
-if a2 == "추리":
+a2 = input("2) What is my favorite genre? ").strip().lower()
+if a2 == "mystery":
     score += 1
 
 # Q3
-a3 = input("3) 최근에 읽은 책의 키워드는? ").strip().lower()
-if a3 == "사랑":
+a3 = input("3) What’s a keyword from the last book I read? ").strip().lower()
+if a3 == "love":
     score += 1
 
-print("점수:", score, "/ 3")
+print("Score:", score, "/ 3")
 if score == 3:
-    print("완벽해요! 🏆")
+    print("Perfect! 🏆")
 else:
-    print("수고했어요! 다음엔 더 잘할 수 있어요 💪")
+    print("Good job! You can do even better next time 💪")
 ```
 
-**포인트**
+**Points**
 
-- `strip()` → 앞뒤 공백 제거, `lower()` → 소문자로 맞춰 비교
-- 오늘은 **단일 정답**만 인정(리스트 비교, 다중 정답은 Day 2)
+- `strip()` → removes spaces, `lower()` → makes lowercase
+- Only **one correct answer** today (multi-answer tomorrow)
 
 ---
 
-## 5. 회고
+## 5. Reflection
 
-### 5-1. 한 줄 회고 남기기
+### 5-1. One-line Reflection
 
 ```python
-reflection = "오늘 해보니 느낀 점: _____. 다음에는 ____를 만들고 싶다."
+reflection = "Today I felt _____. Next time I want to make ____."
 print(reflection)
 ```
 
-### 5-2. 결과 저장
+---
 
-- 퀴즈 실행 결과 화면 **스크린샷** 촬영
-- Colab 노트는 구글 드라이브에 자동 저장됨
+## Assignment
+
+1. Expand the quiz to **5 questions**
+2. Calculator: Receive 3 numbers, print **sum and average**
+3. Add a **hint** when the answer is wrong
 
 ---
 
-## 과제
+## Troubleshooting
 
-1. 퀴즈를 **5문항**으로 늘리기
-2. 계산기: 숫자 3개를 받아 **합과 평균** 출력
-3. 오답일 때 **힌트** 한 줄 출력 추가
-
----
-
-## 트러블슈팅
-
-- **SyntaxError**: 따옴표/괄호 짝 확인
-- **NameError**: 변수명 철자 확인(대소문자 구분)
-- **ValueError**: `int()` 변환 시 숫자 외 입력 → 숫자만 입력 또는 `try/except` 사용
-- 이상하면: **런타임 → 런타임 다시 시작** 후 재실행
+- **SyntaxError**: check quotes/parentheses
+- **NameError**: check variable spelling (case-sensitive)
+- **ValueError**: happens when `int()` gets non-numeric input → enter only numbers or use `try/except`
+- If stuck: **Runtime → Restart Runtime** and re-run
 
 ---
-
-## 다음 시간
-
-- `if/elif/else`로 **여러 정답** 허용 퀴즈 만들기
-- HTML 기초로 **자기소개 웹페이지** 만들기(제목/문단/이미지/링크)
