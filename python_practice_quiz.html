@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python Practice Quiz for Beginners (No Starter Code)</title>
+  <style>
+    :root{--bg:#f7fafc;--card:#ffffff;--ink:#1a202c;--muted:#4a5568;--accent:#2563eb}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    .container{max-width:900px;margin:40px auto;padding:0 20px}
+    .card{background:var(--card);border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,.06);padding:28px}
+    h1{font-size:clamp(22px,4vw,32px);margin:0 0 6px}
+    .subtitle{color:var(--muted);margin:0 0 22px}
+    ol{padding-left:24px}
+    li{margin:16px 0}
+    .task{font-weight:600}
+    .hint{margin:8px 0 0 0;color:var(--muted)}
+    .hint strong{color:var(--accent)}
+    .footer{margin-top:28px;font-size:14px;color:var(--muted)}
+    .badge{display:inline-block;background:#e0ecff;color:#0f3fbf;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;margin-left:8px}
+    .section{margin-top:10px}
+    .hr{height:1px;background:#eaeef5;margin:18px 0}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Python Practice Quiz for Beginners</h1>
+      <p class="subtitle">No starter code — write everything yourself! <span class="badge">input · print · if · for</span></p>
+      <div class="hr"></div>
+
+      <ol>
+        <li>
+          <div class="task">Greeting Program</div>
+          <div class="section">Ask for the user’s name and print: <em>"Hello, ___!"</em></div>
+          <div class="hint"><strong>Hint:</strong> Use <code>input()</code> to ask; use <code>print()</code> to show the message.</div>
+        </li>
+        <li>
+          <div class="task">Age Checker</div>
+          <div class="section">Ask for an age. If the age is <strong>13 or older</strong>, print “You’re a teenager!”, otherwise print “You’re still a kid!”.</div>
+          <div class="hint"><strong>Hint:</strong> Use <code>if</code> / <code>else</code>; convert input to a number with <code>int()</code>.</div>
+        </li>
+        <li>
+          <div class="task">Say Hello 5 Times</div>
+          <div class="section">Print “Hello!” five times in a row.</div>
+          <div class="hint"><strong>Hint:</strong> Use a <code>for</code> loop with <code>range(5)</code>.</div>
+        </li>
+        <li>
+          <div class="task">Odd or Even</div>
+          <div class="section">Print numbers 1 through 5. For each number, print “Even!” if it’s even, otherwise “Odd!”.</div>
+          <div class="hint"><strong>Hint:</strong> <code>%</code> finds a remainder; <code>==</code> means “is equal to”; even check: <code>num % 2 == 0</code>.</div>
+        </li>
+        <li>
+          <div class="task">Repeat Your Name</div>
+          <div class="section">Ask for your name, then print it <strong>3 times</strong>.</div>
+          <div class="hint"><strong>Hint:</strong> Use <code>input()</code> to get the name and a <code>for</code> loop with <code>range(3)</code>.</div>
+        </li>
+        <li>
+          <div class="task">Number Countdown</div>
+          <div class="section">Print the numbers from <strong>5 down to 1</strong>.</div>
+          <div class="hint"><strong>Hint:</strong> <code>range(start, stop, step)</code> with a negative step like <code>-1</code>.</div>
+        </li>
+        <li>
+          <div class="task">Favorite Color</div>
+          <div class="section">Ask for someone’s favorite color, then print a sentence like: “Wow, I love ___ too!”.</div>
+          <div class="hint"><strong>Hint:</strong> Combine text and variables in <code>print()</code> (comma or <code>+</code>).</div>
+        </li>
+        <li>
+          <div class="task">Sum of 1 to 10</div>
+          <div class="section">Calculate and print the total of numbers from 1 through 10.</div>
+          <div class="hint"><strong>Hint:</strong> Start with <code>total = 0</code>; use a <code>for</code> loop and keep adding.</div>
+        </li>
+        <li>
+          <div class="task">Multiplication Practice</div>
+          <div class="section">Ask for a number, then print its times table from <strong>1× to 5×</strong>.</div>
+          <div class="hint"><strong>Hint:</strong> Use <code>int()</code> to convert input; loop with <code>range(1, 6)</code>.</div>
+        </li>
+        <li>
+          <div class="task">Word Length</div>
+          <div class="section">Ask the user to type any word, then print how many letters it has.</div>
+          <div class="hint"><strong>Hint:</strong> Use <code>len()</code> to count characters.</div>
+        </li>
+      </ol>
+
+      <p class="footer">Tip: Encourage students to save each solution in a separate file (e.g., <code>q1.py</code>, <code>q2.py</code> …) and run them from the terminal.</p>
+    </section>
+  </main>
+</body>
+</html>
